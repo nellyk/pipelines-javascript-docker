@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nellykpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nellykpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: nellykpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: nellykpipelinesjavascriptdocker 
+          image: mycontainernkib.azurecr.io/nellykpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
